@@ -216,7 +216,7 @@ Page({
     if(goodsItem.count == 1){
       wx.showModal({
         title: '确认删除',
-        content: '你的购物车中还剩一个该商品，确认删除吗',
+        content: '你的狗屋车中还剩一个该商品，确认删除吗',
         showCancel: true,
         cancelText: '取消',
         cancelColor: '#000000',
@@ -274,7 +274,7 @@ Page({
     if (that.data.cartTotal.selectedgoodsCount <= 0) {
       wx.showToast({
         image: '/static/images/icon_error.png',
-        title: '未选中商品'
+        title: '未选中赏评'
       });
       return false;
     }
@@ -283,7 +283,7 @@ Page({
       if(res.cd == 0){
         var orderId = res.data.orderId;
         wx.navigateTo({
-          url: '../shopping/checkout/checkout?orderId=' + orderId
+          url: '../brhavior/checkout/checkout?orderId=' + orderId
         })
       }
     });
@@ -361,7 +361,7 @@ Page({
 
     wx.showModal({
       title: '确认删除',
-      content: '确认删除该商品吗',
+      content: '确认删除该赏评吗',
       showCancel: true,
       cancelText: '取消',
       cancelColor: '#000000',
@@ -390,8 +390,8 @@ Page({
 
   poptips:function () {
     wx.showModal({
-      title: '一元购须知',
-      content: '下单后只需预付一元，确认收货后补足剩余尾款',
+      title: '一元须知',
+      content: '下单后只需预先一元',
       showCancel: true,
       cancelText: '取消',
       cancelColor: '#000000',

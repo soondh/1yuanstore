@@ -95,16 +95,8 @@
 
 <view class="bottom-btn" hidden="{{openAttr||buyopenAttr}}">
   <button class="share sharetext" open-type="share">分享</button>
-  <view class="addToCart" bindtap="addToCart">加入购物车</view>
+  <view class="addToCart" bindtap="addToCart">加入狗屋车</view>
   <view class="buyNow" >立即购买</view>
 </view>
 
-
-<view class='dialog-login' wx:if="{{showLoginDialog}}" bindtap='onCloseLoginDialog'>
-  <view class='dialog-body' catchtap='onDialogBody'>
-    <view class='title'>请先登陆</view>
-    <view class='content'>
-      <button type="primary" open-type="getUserInfo" bindgetuserinfo="onWechatLogin">微信登录</button>
-    </view>
-  </view>
-</view>
+<loginComponents id="loginComponents"></loginComponents>

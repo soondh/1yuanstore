@@ -183,7 +183,7 @@ Page({
     // 页面初始化 options为页面跳转所带来的参数
     this.setData({
       id: parseInt(options.id),
-      page: '<div>好东西，具体看图<img src="http://image.chunshuitang.com/goods/401078.jpg"></img>看图<img src="http://image.chunshuitang.com/goods/401078.jpg"></img></div>'
+      page: '<div>mock data,具体看图<img src="http://image.chunshuitang.com/goods/401078.jpg"></img>看图<img src="http://image.chunshuitang.com/goods/401078.jpg"></img></div>'
     });
     var that = this;
     this.getGoodsInfo();
@@ -191,6 +191,9 @@ Page({
   },
   onReady: function () {
     // 页面渲染完成
+    this.loginComponent = this.selectComponent("#loginComponents")
+
+    console.log(this.loginComponent)
 
   },
   onShow: function () {
@@ -283,9 +286,15 @@ Page({
     if(!util.isLogin()) {
       console.log("please login")
       that.setData({
+        "showLoginDialog": true
+      })
+      that.loginComponent.onShowLogingDilog()
+      console.log(that.loginComponent)
+      /*
+      that.setData({
         showLoginDialog:true
       });
-  
+  */
     } 
     //添加到购物车
     util.request(api.CartAdd, { goodsId: this.data.goods.id, count: this.data.number, selected: true}, "POST")

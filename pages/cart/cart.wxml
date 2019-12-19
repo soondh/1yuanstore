@@ -1,7 +1,7 @@
 <view class="container">
   <view class="no-cart" wx:if="{{cartGoods.length <= 0}}">
     <view class="c">
-      <image src="http://q0n4s6rmz.bkt.clouddn.com/2019120722221575728548emptycart" />
+      <image src="https://wechatyiyuan.oss-cn-hangzhou.aliyuncs.com/emptycart.png" />
       <text>去添加点什么吧</text>
     </view>
   </view>
@@ -44,9 +44,9 @@
           <text class="tprice" style="color:#FF5D69;font-weight:700">¥{{cartTotal.selectedgoodsAmount}}</text>
           <text class="heji">总计: </text>
         </view>
-        <view class="yunfei" style="color:#a9a9a9;font-weight:300;font-size:20rpx">运费:免运费</view>
+        <view class="yunfei" style="color:#a9a9a9;font-weight:300;font-size:20rpx">云非:免云非</view>
       </view>
-      <view class="checkout" bindtap="checkoutOrder" style="background:{{bgColor}};color:{{textColor}}">下单</view>
+      <view class="checkout" bindtap="checkoutOrder" style="background:{{bgColor}};color:{{textColor}}">下蛋</view>
     </view>
   </view>
 </view>

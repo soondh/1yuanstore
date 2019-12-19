@@ -14,7 +14,8 @@ Page({
     banner: [],
     channel: [],
     category: [],
-    currentCategoryData: []
+    currentCategoryData: [],
+    bannerPage: 0,
   },
   onShareAppMessage: function () {
     return {
@@ -125,6 +126,7 @@ Page({
   },
   onHide: function () {
     // 页面隐藏
+    console.log("onHide called")
     var that = this;
     /*
     util.request(api.GoodsCount).then(res => {
@@ -141,6 +143,7 @@ Page({
       return false;
     }
     
+    console.log(event)
     var that = this;
     var clientX = event.detail.x;
     var currentTarget = event.currentTarget;
@@ -187,9 +190,22 @@ Page({
     
   },
 
+  catchtouchmove:function (){
+    
+  },
+
+
   closemodalbox:function() {
     this.setData({
       popshow:false
     });
-  }
+  },
+
+  bannerChange: function (e) {
+    console.log(e)
+    var that = this;
+    that.setData({
+      bannerPage: e.detail.current
+    })
+  }, 
 })

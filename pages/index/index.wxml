@@ -1,19 +1,21 @@
 <!--index.wxml-->
 <view class="container">
   <view class="bannercontainer">
-  <swiper class="banner" indicator-dots="true" autoplay="true" interval="5000" duration="1000" circular="true">
+  <swiper class="banner" indicator-dots="{{false}}" autoplay="true" interval="5000" duration="1000" circular="true" bindchange="bannerChange">
     <swiper-item wx:for="{{banner}}" wx:key="{{item.id}}">
       <navigator url="{{item.link}}">
         <image src="{{item.url}}" background-size="cover"></image>
       </navigator>
     </swiper-item>
   </swiper>
+  <view class="bannerCount">{{bannerPage+1}}/{{banner.length}}</view>
   </view>
 
   <view class="cate-nav">
     <scroll-view scroll-x="true" class="cate-nav-body" style="width: 750rpx;" scroll-left="{{scrollLeft}}">
       <view  wx:for="{{category}}" wx:key="category" class="item {{ id == item.id ? 'active' : ''}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="switchCate">
         <view class="cate-icon">
+
           <image class="imgselected" src="{{item.selected}}" wx:if="{{item.id == id}}"></image>
           <image class="imgselected" src="{{item.unselected}}" wx:if="{{item.id!=id}}"></image>
         </view>
@@ -39,14 +41,13 @@
       </navigator>
     </view>
   </view>
+</view>
 
-
-  <view class="modal-box" hidden="{{!popshow}}" bindtap="hidemodalbox">
-    <view class="modal-content">
-      <image class='popimg' src="{{popimgUrl}}" mode='aspectFill' />
-    </view>
+<view class="modal-box" hidden="{{!popshow}}" bindtap="hidemodalbox" catchtouchmove="catchtouchmove" scroll-y="{{false}}">
     <view class='closebtn' catchtap="closemodalbox">
       <image class='closebtnimg' src='https://yiyuangou168.oss-cn-hangzhou.aliyuncs.com/%E5%85%B3%E9%97%AD%402x.png' mode='aspectFill'></image>
     </view>
+    <view class="modal-content">
+      <image class='popimg' src="{{popimgUrl}}" mode='aspectFill' />
+    </view>
   </view>
-</view>

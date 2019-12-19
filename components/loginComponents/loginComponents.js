@@ -5,11 +5,12 @@ Component({
             type:String,
             value:'',
             observer: function(){}
-        },
-
+            
+    },
+      
     },
     data: {
-        showLoginDialog: false
+        showLoginDialog: true
 
     },
     methods: {

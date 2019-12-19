@@ -98,5 +98,4 @@
   <view class="addToCart" bindtap="addToCart">加入狗屋车</view>
   <view class="buyNow" >立即购买</view>
 </view>
-
-<loginComponents id="loginComponents"></loginComponents>
+<loginComponents wx:if="{{showLoginDialog}}"  class="dialog-login" id="loginComponents"></loginComponents>

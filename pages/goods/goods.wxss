@@ -2,10 +2,11 @@
   margin-bottom: 100rpx;
 }
 
-.goodsbannercontainer{
-  margin-top:1rpx;
+.goodsbannercontainer {
+  margin-top: 1rpx;
   overflow: hidden;
 }
+
 .goodsimgs {
   width: 750rpx;
   height: 837rpx;
@@ -66,8 +67,8 @@
   color: #b4282d;
 }
 
-.static{
-  width:750rpx;
+.static {
+  width: 750rpx;
   height: 69rpx;
   background: #fff;
   margin-bottom: 20rpx;
@@ -268,6 +269,7 @@
   text-align: center;
   color: #fff;
 }
+
 @import "../../lib/wxParse/wxParse.wxss";
 
 .attr-pop-box {
@@ -391,6 +393,7 @@
 .number-item {
   width: 610rpx;
 }
+
 .number-item .selnum {
   width: 322rpx;
   height: 71rpx;
@@ -446,13 +449,13 @@
 }
 
 
-.dialog-login{
+.dialog-login {
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.5); 
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -460,7 +463,7 @@
 }
 
 
-.dialog-login .dialog-body{
+.dialog-login .dialog-body {
   width: 540rpx;
   height: auto;
   overflow: hidden;
@@ -469,16 +472,29 @@
   padding: 40rpx;
 }
 
-.dialog-login .dialog-body .title{
+.dialog-login .dialog-body .title {
   width: 100%;
   text-align: center;
   line-height: 60rpx;
 }
 
-.dialog-login .dialog-body .content{
+.dialog-login .dialog-body .content {
   width: 100%;
 }
 
-.dialog-login .dialog-body button{
+.dialog-login .dialog-body button {
   margin-top: 30rpx;
+}
+
+.dialog-login {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
 }

@@ -1,6 +1,6 @@
 
-.dialog-login{
-    width: 100%;
+.dialog-login1{
+    /* width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
@@ -9,11 +9,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 100;
+    z-index: 100; */
   }
   
   
-.dialog-login .dialog-body{
+.dialog-login1 .dialog-body{
   width: 540rpx;
   height: auto;
   overflow: hidden;
@@ -23,19 +23,19 @@
   z-index: 100;
 }
   
-.dialog-login .dialog-body .title{
+.dialog-login1 .dialog-body .title{
   width: 100%;
   text-align: center;
   line-height: 60rpx;
   z-index: 100;
 }
   
-.dialog-login .dialog-body .content{
+.dialog-login1 .dialog-body .content{
   width: 100%;
   z-index: 100;
 }
   
-.dialog-login .dialog-body button{
+.dialog-login1 .dialog-body button{
   margin-top: 30rpx;
   z-index: 100;
 }
